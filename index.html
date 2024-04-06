@@ -1,0 +1,166 @@
+<!-- This website template is created by Sugam Subedi , 2024/04/06 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* CSS styles for the heading */
+        .heading {
+            background-color: #1104c4;
+            color: white;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* CSS styles for labels */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* CSS styles for  input fields */
+        input[type="number"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #c6c4c4cc;
+            box-sizing: border-box;
+        }
+
+        /* CSS styles for oval button */
+        .ovalbutton {
+            display: flex;
+            justify-content: flex-end;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* CSS styles for buttons */
+        button {
+            border-radius: 50%;
+            padding: 10px 20px;
+            background-color: #37507e;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* CSS styles for the converter section */
+        .converter {
+            margin: 10%;
+            text-align: center;
+        }
+
+        /* CSS styles for the sections */
+        .Section1,
+        .Section2 {
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+        }
+
+        .section1-1,
+        .section2-1 {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3d4b78;
+            padding: 5px;
+            margin-left: -4px; 
+            height: 100%; /* Set height to 100% */
+        }
+
+        .section1-1 img,
+        .section2-1 img {
+            width: 30px;
+            height: 20px;
+            margin-right: 5px; 
+        }
+
+        .fa-exchange-alt {
+            margin: 20px;
+            color: #3d4b78;
+        }
+
+        select {
+            background-color: #37507e;
+            color: white; 
+            border: none; 
+            padding: 5px; 
+        }
+
+        /* CSS styles for button hover effect */
+        button:hover {
+            background-color: #37507e;
+        }
+
+        /* CSS styles for images */
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<!-- Heading Section -->
+<div class="heading">
+    <!-- Heading with relevant text -->
+    <h1> US Dollar to Canadian Dollar</h1><br>
+    <h2>Convert USD to CAD at the real exchange rate</h2>
+</div>
+<!-- Currency Converter Section -->
+<div class="converter">
+    <!-- Form for currency conversion -->
+    <form>
+        <!-- Section 1 for inputting amount in USD -->
+        <div class="Section1">
+            <!-- Label for USD input -->
+            <label for="Amount">Amount</label>
+            <!-- Input field for USD amount -->
+            <input type="number" id="number" name="number" min="1" max="10000000">
+            <!-- USA Flag and dropdown for selecting USD -->
+            <div class="section1-1">
+                <!-- Image of USA flag -->
+                <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+                <!-- Dropdown for selecting USD -->
+                <select name="country-usa" id="country-usa">
+                    <option value="USD">USD</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Icon for exchange -->
+        <i class="fas fa-exchange-alt" alt="arrow"></i>
+
+        <!-- Section 2 for displaying converted amount in CAD -->
+        <div class="Section2">
+            <!-- Label for converted amount in CAD -->
+            <label for="Converted_to">Converted to</label>
+            <!-- Input field for converted amount in CAD -->
+            <input type="number" id="number1" name="number1">
+            <!-- Canada Flag and dropdown for selecting CAD -->
+            <div class="section2-1">
+                <!-- Image of Canada flag -->
+                <img src="https://flagcdn.com/48x36/ca.png" alt="flag">
+                <!-- Dropdown for selecting CAD -->
+                <select name="country-canada" id="country-canada">
+                    <option value="CAD">CAD</option>
+                </select>
+            </div>
+        </div>
+        <!-- Button for initiating currency conversion -->
+        <div class="ovalbutton">
+            <button type="button" onclick="fun310()">Convert</button>
+        </div>
+    </form>
+</div>
+<!-- Paragraph for displaying time -->
+<p id="time"></p>
+<!-- Script tag for linking JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
